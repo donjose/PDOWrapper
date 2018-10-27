@@ -1,0 +1,28 @@
+{
+  "name"        : "donjose/pdowrapper",
+  "description" : "Simple PHP PDO wrapper",
+  "version"     : "v0.1.0",
+  "keywords"    : "php PDO, PDO wrapper, Database",
+  "license"     : "MIT",
+  "authors"     : [
+    {
+      "name"    : "Roman Hnatko",
+      "email"   : "roman@gnatko.com",
+      "homepage": "https://www.megabomba.net",
+      "role"    : "Developer"
+    }
+  ],
+
+  "support"     : {
+    "email"     : "roman@gnatko.com",
+  },
+  "require"     : {
+    "php"       : "^5.3"
+  },
+  "autoload"    : {
+    "psr-4"       : {
+      "" : "src/"
+    }
+  }
+
+}
