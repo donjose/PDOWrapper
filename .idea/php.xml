@@ -5,4 +5,5 @@
       <path value="C:/php/pear" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.3.0" />
 </project>

@@ -6,6 +6,8 @@
  * Time: 0:09
  */
 
+namespace donjose;
+
 class PDOWrapper
 {
 
@@ -16,9 +18,9 @@ class PDOWrapper
     public function __construct($host,$user,$db_name,$password)
     {
         $this->dbh = new \PDO(
-            "mysql:host=" . $this->host . ";dbname=" . $this->db_name,
-            $this->user,
-            $this->password,
+            "mysql:host=" . $host . ";dbname=" . $db_name,
+            $user,
+            $password,
             array(
                 \PDO::ATTR_PERSISTENT         => true,
                 \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
