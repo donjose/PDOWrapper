@@ -11,7 +11,7 @@
     }
   ],
   "minimum-stability": "dev",
-  "prefer-stable": false,
+ 
   "support"     : {
     "email"     : "roman@gnatko.com"
   },
