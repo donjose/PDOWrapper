@@ -10,17 +10,25 @@
       "role"    : "Developer"
     }
   ],
-
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/donjose/pdowrapper"
+    }
+  ],
+  "prefer-stable": false,
   "support"     : {
     "email"     : "roman@gnatko.com"
   },
   "require"     : {
     "php"       : ">=5.3.0"
   },
+  "type" : "library",
   "autoload"    : {
     "psr-4"       : {
       "donjose\\PDOWrapper\\" : "src/"
     }
-  }
+  },
+  "minimum-stability" : "dev"
 
 }

@@ -6,7 +6,7 @@
  * Time: 0:09
  */
 
-namespace donjose;
+namespace donjose\PDOWrapper;
 
 class PDOWrapper
 {
@@ -58,6 +58,10 @@ class PDOWrapper
         return $this;
     }
 
+    public function newMethod() {
+
+    }
+
     public function findAll() {
         $this->stmt->execute();
         return $this->stmt->fetchAll();
@@ -86,7 +90,9 @@ class PDOWrapper
 
     public function select($table,$condition = null,$fields = '*') {
         $sql = "SELECT $fields FROM $table";
-        if (!is_null($condition)) $sql .= ' WHERE ' . $condition;
+        if (!is_null($condition)) {
+            $sql .= ' WHERE ' . $condition;
+        }
         $this->stmt = $this->dbh->prepare($sql);
 
         $this->execute();
