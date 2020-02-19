@@ -58,8 +58,19 @@ class PDOWrapper
         return $this;
     }
 
-    public function newMethod() {
+    public function first() {
 
+    }
+
+    public function selectColumns($table,$column, $condinion = null) {
+        $this->smtp = $this->dbh->query("SELECT $column FROM $table $condition");
+        $this->stmt->execute();
+        return $this->stmt->fetchAll();
+    }
+    public function selectOneColumn($table,$column, $condinion = null) {
+        $this->smtp = $this->dbh->query("SELECT $column FROM $table $condition");
+        $this->stmt->execute();
+        return $this->stmt->fetchColumn();
     }
 
     public function findAll() {
@@ -72,7 +83,7 @@ class PDOWrapper
     }
     public function rowCount() {
         $this->stmt->execute();
-        return $this->stmt->rowCount();
+        return $this->stmt->fetchColumn();
     }
 
     public function findOne() {
